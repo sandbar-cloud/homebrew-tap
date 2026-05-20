@@ -5,20 +5,20 @@
 class Sandbar < Formula
   desc "Deploy static sites to Sandbar"
   homepage "https://sandbar.cloud"
-  version "1.8.0"
+  version "1.8.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.0/sandbar_1.8.0_darwin_amd64.tar.gz"
-      sha256 "a8bed31811f12b02cfa309834ebad95763072a34efa39e1a7f51de73827f5d75"
+      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.1/sandbar_1.8.1_darwin_amd64.tar.gz"
+      sha256 "786e0e09446853949adbd0c74cf9d1275a648d9a957883162ecce89b3419d0ae"
 
       define_method(:install) do
         bin.install "sandbar"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.0/sandbar_1.8.0_darwin_arm64.tar.gz"
-      sha256 "8d52b0522127283c3f70eaccffa9a9e89b98400d6307f42e309f229a46abf0e0"
+      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.1/sandbar_1.8.1_darwin_arm64.tar.gz"
+      sha256 "d2108ff6873486d070825daf6b691ae8e0940456df0a68db205a61950e014bc7"
 
       define_method(:install) do
         bin.install "sandbar"
@@ -28,15 +28,15 @@ class Sandbar < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.0/sandbar_1.8.0_linux_amd64.tar.gz"
-      sha256 "14b9062f56a21164c4739b4cae663d3f4cb2aa3e8f7bf570d60224f6db42c897"
+      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.1/sandbar_1.8.1_linux_amd64.tar.gz"
+      sha256 "91cdecba4df98ad310d3b0cab593ace24dbe34c5be932f7a464f0b7e851fff2e"
       define_method(:install) do
         bin.install "sandbar"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.0/sandbar_1.8.0_linux_arm64.tar.gz"
-      sha256 "3b615686a8d167ea112741c88c8a0469680b5b7da273737752f6188ff4f01e53"
+      url "https://github.com/sandbar-cloud/sandbar-cli/releases/download/v1.8.1/sandbar_1.8.1_linux_arm64.tar.gz"
+      sha256 "e942585b12554d44226328d1acfe0ee9691872038e54d76377f3933d98976615"
       define_method(:install) do
         bin.install "sandbar"
       end
